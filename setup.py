@@ -232,14 +232,14 @@ if sys.platform.startswith('win'):
         )
     )
 elif sys.platform.startswith('darwin'):
-    sb_include_dirs.append('/usr/local/Cellar/openal-soft/1.21.1/include/AL')
+    sb_include_dirs.append('/opt/homebrew/Cellar/openal-soft/1.22.2/include/AL')
     ext_modules.append(
         Extension(
             name='sphinxbase._ad_openal',
             sources=['swig/sphinxbase/ad_openal.i', 'deps/sphinxbase/src/libsphinxad/ad_openal.c'],
             swig_opts=sb_swig_opts,
             include_dirs=sb_include_dirs,
-            extra_objects=['/usr/local/Cellar/openal-soft/1.21.1/lib/libopenal.1.21.1.dylib'],
+            extra_objects=['/opt/homebrew/Cellar/openal-soft/1.22.2/lib/libopenal.1.22.2.dylib'],
             define_macros=define_macros,
             extra_compile_args=extra_compile_args,
             extra_link_args=extra_link_args
